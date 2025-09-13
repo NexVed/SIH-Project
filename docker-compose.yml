@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "3000:3000"
+
+  backend:
+    build: ./backend
+    ports:
+      - "4000:4000"
+
+  ml-service:
+    build: ./ml-service
+    ports:
+      - "5000:5000"
+
+  supabase:
+    image: supabase/postgres
+    ports:
+      - "5432:5432"
