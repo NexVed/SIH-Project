@@ -1,0 +1,8 @@
+/* Tailwind v4 uses CSS variables. We expose a few handy utilities for the theme. */
+:root {
+  --radius: 0.5rem;
+}
+
+.rounded-theme {
+  border-radius: var(--radius);
+}
