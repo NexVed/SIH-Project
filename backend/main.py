@@ -140,7 +140,7 @@ def identify_dravya(data: SensorInput):
 
     description_prompt = (
         f"You are an Ayurvedic expert. Provide a structured JSON-like description (no code block) for the herb '{prediction}'. "
-        "Fields: Name, LatinName (if known), AyurvedicProperties (Guna, Rasa, Virya, Vipaka), MedicinalUses (list), FoodUses (list), SafetyNotes."
+        "Fields: Name, AyurvedicProperties (Guna, Rasa, Virya, Vipaka), MedicinalUses (list), FoodUses (list), SafetyNotes."
     )
     desc = generate_gemini_text(description_prompt, model_name="gemini-1.5-flash")
     if not desc:
