@@ -23,7 +23,6 @@ export interface IdentifyPayload {
 export interface IdentifyResponse {
   dravya: string;
   description: string;
-  image_base64?: string | null;
 }
 
 export async function identifyDravya(payload: IdentifyPayload) {

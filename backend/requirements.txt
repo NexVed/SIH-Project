@@ -7,5 +7,3 @@ joblib
 requests
 python-dotenv
 google-generativeai
-google-genai
-Pillow

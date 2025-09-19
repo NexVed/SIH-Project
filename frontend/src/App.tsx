@@ -8,7 +8,6 @@ import axios from "axios";
 interface IdentifyResult {
   dravya: string;
   description: string;
-  image_base64?: string | null;
 }
 
 function App() {
@@ -193,18 +192,7 @@ function App() {
                       <p className="text-xs uppercase tracking-wider text-neutral-400">Description</p>
                       <p className="text-sm leading-relaxed text-neutral-300 whitespace-pre-wrap">{identifyResult.description}</p>
                     </div>
-                    <div className="space-y-2">
-                      <p className="text-xs uppercase tracking-wider text-neutral-400">Image</p>
-                      {identifyResult.image_base64 ? (
-                        <img
-                          src={`data:image/png;base64,${identifyResult.image_base64}`}
-                          alt={identifyResult.dravya}
-                          className="w-full rounded-md border border-emerald-500/20"
-                        />
-                      ) : (
-                        <p className="text-xs text-neutral-500 italic">No image available.</p>
-                      )}
-                    </div>
+                    <p className="text-[10px] text-neutral-500 pt-2 border-t border-neutral-700/40">Image generation disabled (removed per latest request).</p>
                   </div>
                 </div>
               ) : (
